@@ -35,7 +35,7 @@ public class ProductRepository implements IProductRepository {
                 .filter(product -> product.getId() == productId && product.getUserId() == userId)
                 .findFirst();
         if (productWrapper.isEmpty()) {
-            throw new ProductCollectionException(ProductCollectionException.notFound(productId));
+            throw new ProductCollectionException("there is no product identified by : "+productId);
         }
         return productWrapper.get();
     }
@@ -47,7 +47,7 @@ public class ProductRepository implements IProductRepository {
                 .filter(p -> p.getId() == product.getId())
                 .findFirst();
         if (productWrapper.isPresent()) {
-            throw new ProductCollectionException(ProductCollectionException.alreadyExists(product.getId()));
+            throw new ProductCollectionException("the indicated id is already bind to a product: "+product.getId());
         }
         if (product.getUserId() == userId)
             return this.products.add(product);

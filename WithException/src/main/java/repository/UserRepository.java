@@ -25,7 +25,7 @@ public class UserRepository implements IUserRepository {
                 .filter(u ->u.getEmail().equals(user.getEmail()))
                 .findFirst();
         if (userWrapper.isPresent()) {
-            throw new UserCollectionException(UserCollectionException.alreadyExists(user.getEmail()));
+            throw new UserCollectionException("an account already exists with this email address: "+user.getEmail());
         }
         return this.users.add(user);
     }
@@ -37,7 +37,7 @@ public class UserRepository implements IUserRepository {
                 .filter(user -> user.getEmail().equals(email) && user.getPassword().equals(password))
                 .findFirst();
         if (userWrapper.isEmpty()) {
-            throw new UserCollectionException(UserCollectionException.badIdentifiers());
+            throw new UserCollectionException("invalid email or password");
         }
         return userWrapper.get();
     }

@@ -16,7 +16,7 @@ public class UserData {
         Random rand = new Random();
         for (int i = 0; i<2; i++) {
             if(!repository.createUser(new User("userId"+i, 18 + rand.nextInt(43), "user"+i+"@gmail.com", "password"))) {
-                System.err.println(UserCollectionException.notCreated());
+                System.err.println("creating user error");
             }
         }
     }
