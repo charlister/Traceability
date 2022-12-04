@@ -1,0 +1,10 @@
+With*/target/
+
+### IntelliJ IDEA ###
+With*/.idea/modules.xml
+With*/.idea/jarRepositories.xml
+With*/.idea/compiler.xml
+With*/.idea/libraries/
+With*/*.iws
+With*/*.iml
+With*/*.ipr
