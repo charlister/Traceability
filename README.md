@@ -7,29 +7,21 @@ Présentation des packages :
 - _repository_ : on y trouve le code permettant de gérer une base de donnée locale où les données seront inscrites dans la mémoire le temps de l'exécution du programme.
 - _exception_ : les exceptions pouvant survenir lors de l'exécution des requêtes.
 - _data_ : on y fabrique les données initiales. On pourra se connecter avec les identifiants suivants : 
-  - email : _user0@gmail.com_
+  - email : _user1@gmail.com_
   - password : _password_
 - _main_ : le package principal à partir duquel sera lancer l'application depuis la classe **Application**.
 
 ## Question 2
 
-Pour la suite du TP, nous choisissons d'utiliser SLF4J comme outil pour faire du logging. 
+Pour la suite du TP, nous choisissons d'utiliser _java.util.Logger_ comme outil pour faire du logging. 
 SLF4J est une couche d'abstraction pour les API de logging Java. 
 Les avantages de l'utilisation d'une telle couche d'abstraction permettent de s'abstraire de l'implémentation utilisée. 
 Ainsi, il est possible de changer facilement d'implémentation de logging sans avoir à toucher la base de code. 
 Dans le cas de la conception d'une librairie, cela permet de laisser à l'utilisateur de cette librairie le choix du système de logging.
-```XML
-<!-- Dépendance API SLF4J -->
-<dependency> 
-  <groupId>org.slf4j</groupId>
-  <artifactId>slf4j-api</artifactId>
-  <version>2.0.5</version>
-</dependency>
-```
 
 ## Question 3
 
-Pour cette question, nous utilisons Spoon pour faire du logging en utilisant l’outil de logging choisi dans la question 2 (c'est-à-dire SLF4J), de sorte que les journaux générés peuvent être exploités pour créer des profils d’utilisateurs comme suit :
+Pour cette question, nous utilisons Spoon pour faire du logging en utilisant l’outil de logging choisi dans la question 2 (c'est-à-dire java.util.Logger), de sorte que les journaux générés peuvent être exploités pour créer des profils d’utilisateurs comme suit :
 - Un profil pour ceux qui ont principalement effectué des opérations de lecture sur le dépôt.
 - Un profil pour ceux qui ont principalement effectué des opérations d’écriture sur le dépôt.
 - Un profil pour ceux qui ont recherché les produits les plus chers sur le dépôt.
