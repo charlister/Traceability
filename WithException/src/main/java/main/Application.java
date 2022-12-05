@@ -98,6 +98,8 @@ public class Application {
     }
 
     Product writeProduct() {
+        System.err.print("id : ");
+        long id = Long.parseLong(this.sc.nextLine().trim());
         System.err.print("name : ");
         String name = this.sc.nextLine().trim();
         System.err.print("price : ");
@@ -109,7 +111,7 @@ public class Application {
         int month = Integer.parseInt(this.sc.nextLine().trim());
         System.err.print("\tday (dd) : ");
         int day = Integer.parseInt(this.sc.nextLine().trim());
-        return new Product(name, price, new Date(year, month, day), userConnected.getId());
+        return new Product(id, name, price, new Date(year, month, day), userConnected.getId());
     }
 
     void chooseOptionProduct() throws ProductCollectionException {

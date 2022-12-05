@@ -18,6 +18,14 @@ public class Product {
         this.userId = userId;
     }
 
+    public Product(long id, String name, float price, Date expirationDate, long userId) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.expirationDate = expirationDate;
+        this.userId = userId;
+    }
+
     public long getId() {
         return id;
     }

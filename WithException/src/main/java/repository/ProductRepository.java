@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.logging.Level;
 import java.util.stream.Collectors;
 
 public class ProductRepository implements IProductRepository {
@@ -56,13 +57,30 @@ public class ProductRepository implements IProductRepository {
 
     @Override
     public boolean deleteProduct(long productId, long userId) throws ProductCollectionException {
-        Product product = this.getProductById(productId, userId);
+        Optional<Product> productWrapper = this.products
+                .stream()
+                .filter(product -> product.getId() == productId && product.getUserId() == userId)
+                .findFirst();
+        if (productWrapper.isEmpty()) {
+            throw new ProductCollectionException("there is no product identified by : "+productId);
+        }
+
+        Product product = productWrapper.get();
         return this.products.remove(product);
     }
 
     @Override
     public Product updateProduct(Product product, long userId) throws ProductCollectionException {
-        Product p = this.getProductById(product.getId(), userId);
+        Optional<Product> productWrapper = this.products
+                .stream()
+                .filter(p -> p.getId() == product.getId() && p.getUserId() == userId)
+                .findFirst();
+        if (productWrapper.isEmpty()) {
+            throw new ProductCollectionException("there is no product identified by : "+product.getId());
+        }
+
+        Product p = productWrapper.get();
+
         if (product.getName()!=null && !product.getName().trim().isEmpty()) {
             p.setName(product.getName());
         }
