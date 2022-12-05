@@ -13,11 +13,7 @@ Présentation des packages :
 
 ## Question 2
 
-Pour la suite du TP, nous choisissons d'utiliser _java.util.Logger_ comme outil pour faire du logging. 
-SLF4J est une couche d'abstraction pour les API de logging Java. 
-Les avantages de l'utilisation d'une telle couche d'abstraction permettent de s'abstraire de l'implémentation utilisée. 
-Ainsi, il est possible de changer facilement d'implémentation de logging sans avoir à toucher la base de code. 
-Dans le cas de la conception d'une librairie, cela permet de laisser à l'utilisateur de cette librairie le choix du système de logging.
+Pour la suite du TP, nous choisissons d'utiliser _java.util.Logger_ comme outil pour faire du logging.
 
 ## Question 3
 
