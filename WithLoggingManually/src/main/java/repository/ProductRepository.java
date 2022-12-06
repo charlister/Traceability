@@ -23,7 +23,7 @@ public class ProductRepository implements IProductRepository {
         // ajouter le fileHandler dans un block try/catch du constructeur
         try {
             // créer le fileHander
-            fileHandler  = new FileHandler("./log_app.log");
+            fileHandler  = new FileHandler("./traceability.log");
 
             // ajouter le fileHander à LOGGER
 //            LOGGER.addHandler(consoleHandler);

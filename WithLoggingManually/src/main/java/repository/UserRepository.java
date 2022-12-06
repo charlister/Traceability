@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 
 public class UserRepository implements IUserRepository {
     // insertion de LOGGER
-    private static final Logger LOGGER = Logger.getLogger(UserRepository.class.getName());
+    private final Logger LOGGER = Logger.getLogger(this.getClass().getName());
     // insertion Handler pour fichier
     Handler fileHandler  = null;
     List<User> users;
