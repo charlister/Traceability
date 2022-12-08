@@ -23,7 +23,7 @@ public class Application {
     UserRepository userRepository = new UserRepository();
     ProductRepository productRepository = new ProductRepository();
 
-    Application() throws ProductCollectionException, UserCollectionException, InterruptedException {
+    Application() throws InterruptedException {
         connexionMenu();
         productMenu();
         initRepositories();
@@ -31,9 +31,15 @@ public class Application {
         this.sc = new Scanner(System.in);
     }
 
-    void initRepositories() throws UserCollectionException, ProductCollectionException {
-        new UserData(userRepository);
-        new ProductData(productRepository);
+    void initRepositories() {
+        try {
+            new UserData(userRepository);
+            new ProductData(productRepository);
+        } catch (UserCollectionException e) {
+            System.err.println(e.getMessage());
+        } catch (ProductCollectionException e) {
+            System.err.println(e.getMessage());
+        }
     }
 
     void connexionMenu() throws InterruptedException {
@@ -47,7 +53,7 @@ public class Application {
         System.out.println(connexionMenuBuffer);
     }
 
-    void chooseOptionConnexion() throws UserCollectionException {
+    void chooseOptionConnexion() {
         System.err.print("choice : ");
         String choice = this.sc.nextLine().trim();
         String email;
@@ -58,7 +64,12 @@ public class Application {
                 email = this.sc.nextLine().trim();
                 System.err.print("password : ");
                 password = this.sc.nextLine().trim();
-                User user = userRepository.connexion(email, password);
+                User user = null;
+                try {
+                    user = userRepository.connexion(email, password);
+                } catch (UserCollectionException e) {
+                    System.err.println(e.getMessage());
+                }
                 if(user != null) {
                     isConnected = true;
                     userConnected = user;
@@ -73,7 +84,11 @@ public class Application {
                 email = this.sc.nextLine().trim();
                 System.err.print("password : ");
                 password = this.sc.nextLine().trim();
-                userRepository.createUser(new User(name, age, email, password));
+                try {
+                    userRepository.createUser(new User(name, age, email, password));
+                } catch (UserCollectionException e) {
+                    System.err.println(e.getMessage());
+                }
                 break;
             case "q":
                 quit = true;
@@ -114,12 +129,16 @@ public class Application {
         return new Product(id, name, price, new Date(year, month, day), userConnected.getId());
     }
 
-    void chooseOptionProduct() throws ProductCollectionException {
+    void chooseOptionProduct() {
         System.err.print("choice : ");
         String choice = this.sc.nextLine().trim();
         switch(choice) {
             case "c":
-                productRepository.addProduct(writeProduct(), userConnected.getId());
+                try {
+                    productRepository.addProduct(writeProduct(), userConnected.getId());
+                } catch (ProductCollectionException e) {
+                    System.err.println(e.getMessage());
+                }
                 break;
             case "r":
                 productRepository.getProducts(userConnected.getId()).forEach(product ->  {
@@ -127,12 +146,20 @@ public class Application {
                 });
                 break;
             case "u":
-                productRepository.updateProduct(writeProduct(), userConnected.getId());
+                try {
+                    productRepository.updateProduct(writeProduct(), userConnected.getId());
+                } catch (ProductCollectionException e) {
+                    System.err.println(e.getMessage());
+                }
                 break;
             case "d":
                 System.err.print("id : ");
                 long id = Long.parseLong(this.sc.nextLine().trim());
-                productRepository.deleteProduct(id, userConnected.getId());
+                try {
+                    productRepository.deleteProduct(id, userConnected.getId());
+                } catch (ProductCollectionException e) {
+                    System.err.println(e.getMessage());
+                }
                 break;
             case "o":
                 isConnected = false;
@@ -145,7 +172,7 @@ public class Application {
         }
     }
 
-    void run() throws ProductCollectionException, UserCollectionException {
+    void run() {
         while (!quit) {
             if (isConnected) {
                 displayProductMenu();
@@ -158,7 +185,7 @@ public class Application {
         }
     }
 
-    public static void main(String[] args) throws ProductCollectionException, UserCollectionException, InterruptedException {
+    public static void main(String[] args) throws InterruptedException {
         Application app = new Application();
         app.run();
         System.err.print("See you later !");
