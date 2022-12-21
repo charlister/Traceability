@@ -88,8 +88,10 @@ public class ProductRepository implements IProductRepository {
                 .findFirst();
         if (productWrapper.isPresent()) {
             final String msg = "the indicated id is already bind to a product: "+product.getId();
+            LOGGER.log(Level.WARNING, String.format("{\"user_id\":%d,\"msg\":\"%s\"}", userId, msg));
             throw new ProductCollectionException(msg);
         }
+        LOGGER.log(Level.INFO, String.format("{\"user_id\":%d}", userId));
         return this.products.add(product);
     }
 
