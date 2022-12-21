@@ -14,7 +14,7 @@ Présentation des packages :
 
 ## Question 2
 
-Pour la suite du TP, nous choisissons d'utiliser _java.util.logging.Logger_ comme outil pour faire du logging.
+Pour la suite du TP, nous choisissons d'utiliser _java.util.logging_ comme outil pour faire la journalisation.
 
 ## Question 3
 
@@ -52,11 +52,12 @@ Remarque : L’utilisation de JSON est fortement recommandée pour le format de 
 - [Documentation java.util.logging](https://docs.oracle.com/javase/8/docs/api/java/util/logging/package-summary.html)
 - [Spoon](https://spoon.gforge.inria.fr/first_analysis_processor.html#:~:text=Spoon%20is%20a%20library%20to%20build%20and%20manipulates,java%20-cp%20spoon-core-10.2.0-jar-with-dependencies.jar%20spoon.Launcher%20%20-i%20MyClass.java%20--gui)
 - [Vidéo YouTube : OW2con'18 Spoon: open source library to analyze, rewrite, transform, transpile Java source code](https://www.youtube.com/watch?v=ZZzdVTIu-OY)
+- [Lire un fichier](https://www.baeldung.com/reading-file-in-java)
+- [Convertir un fichier XML en JSONObject](https://www.javatpoint.com/convert-xml-to-json-in-java)
 
 # A faire
 
 - Design patern Builder ?
 - Lire la suite des questions pour être sûr d'avoir tout traité.
-- Revoir le retour des méthodes par rapport à leur type de retour.
-- ajouter les informations de l'utilisateur pour le profilage.
+- Ajouter les informations de l'utilisateur pour le profilage.
 - Faire le profilage (créer un parser de fichier log, ...).
