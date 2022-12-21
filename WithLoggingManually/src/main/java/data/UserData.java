@@ -14,7 +14,7 @@ public class UserData {
 
     private void buildUsers(UserRepository repository) throws UserCollectionException {
         Random rand = new Random();
-        for (int i = 1; i<=2; i++) {
+        for (int i = 1; i<=10; i++) {
             if(!repository.createUser(new User("userId"+i, 18 + rand.nextInt(43), "user"+i+"@gmail.com", "password"))) {
                 System.err.println("creating user error");
             }

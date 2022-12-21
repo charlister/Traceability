@@ -26,7 +26,6 @@ public class ProductRepository implements IProductRepository {
             fileHandler  = new FileHandler("./traceability.log");
 
             // ajouter le fileHander à LOGGER
-//            LOGGER.addHandler(consoleHandler);
             LOGGER.addHandler(fileHandler);
 
             // modifier le niveau de verbosité autorisé dans fileHander et LOGGER
@@ -43,10 +42,9 @@ public class ProductRepository implements IProductRepository {
         // ajouter ces handler dans le constructeur et dans un block try/catch
         try {
             // créer le fileHander
-            fileHandler  = new FileHandler("./log_app.log");
+            fileHandler  = new FileHandler("./traceability.log");
 
             // ajouter le fileHander à LOGGER
-//            LOGGER.addHandler(consoleHandler);
             LOGGER.addHandler(fileHandler);
 
             // modifier le niveau de verbosité autorisé dans fileHander et LOGGER
@@ -60,6 +58,7 @@ public class ProductRepository implements IProductRepository {
 
     @Override
     public List<Product> getProducts(long userId) {
+        LOGGER.log(Level.INFO, String.format("{\"user_id\":%d}", userId));
         return this.products
                 .stream()
                 .filter(product -> product.getUserId() == userId)
@@ -73,11 +72,11 @@ public class ProductRepository implements IProductRepository {
                 .filter(product -> product.getId() == productId && product.getUserId() == userId)
                 .findFirst();
         if (productWrapper.isEmpty()) {
-            // suppression / mise en commentaire de throw
-//            throw new ProductCollectionException("there is no product identified by : "+productId);
-            LOGGER.log(Level.WARNING, "there is no product identified by : "+productId);
-            return null;
+            final String msg = "there is no product identified by : "+productId;
+            LOGGER.log(Level.WARNING, String.format("{\"user_id\":%d,\"msg\":\"%s\"}", userId, msg));
+            throw new ProductCollectionException(msg);
         }
+        LOGGER.log(Level.INFO, String.format("{\"user_id\":%d,\"product_id\":%d,\"product_price\":%s}", userId, productId, productWrapper.get().getPrice()));
         return productWrapper.get();
     }
 
@@ -88,12 +87,10 @@ public class ProductRepository implements IProductRepository {
                 .filter(p -> p.getId() == product.getId())
                 .findFirst();
         if (productWrapper.isPresent()) {
-//            throw new ProductCollectionException("the indicated id is already bind to a product: "+product.getId());
-            LOGGER.log(Level.WARNING, "the indicated id is already bind to a product: "+product.getId());
+            final String msg = "the indicated id is already bind to a product: "+product.getId();
+            throw new ProductCollectionException(msg);
         }
-        if (product.getUserId() == userId)
-            return this.products.add(product);
-        return false;
+        return this.products.add(product);
     }
 
     @Override
@@ -103,13 +100,13 @@ public class ProductRepository implements IProductRepository {
                 .filter(product -> product.getId() == productId && product.getUserId() == userId)
                 .findFirst();
         if (productWrapper.isEmpty()) {
-            // suppression / mise en commentaire de throw
-//            throw new ProductCollectionException("there is no product identified by : "+productId);
-            LOGGER.log(Level.WARNING, "there is no product identified by : "+productId);
-            return false;
+            final String msg = "there is no product identified by: "+productId;
+            LOGGER.log(Level.WARNING, String.format("{\"user_id\":%d,\"msg\":\"%s\"}", userId, msg));
+            throw new ProductCollectionException(msg);
         }
 
         Product product = productWrapper.get();
+        LOGGER.log(Level.INFO, String.format("{\"user_id\":%d}", userId));
         return this.products.remove(product);
     }
 
@@ -120,10 +117,9 @@ public class ProductRepository implements IProductRepository {
                 .filter(p -> p.getId() == product.getId() && p.getUserId() == userId)
                 .findFirst();
         if (productWrapper.isEmpty()) {
-            // suppression / mise en commentaire de throw
-//            throw new ProductCollectionException("there is no product identified by : "+productId);
-            LOGGER.log(Level.WARNING, "there is no product identified by : "+product.getId());
-            return null;
+            final String msg = "there is no product identified by : "+product.getId();
+            LOGGER.log(Level.WARNING, String.format("{\"user_id\":%d,\"msg\":\"%s\"}", userId, msg));
+            throw new ProductCollectionException(msg);
         }
 
         Product p = productWrapper.get();
@@ -135,6 +131,7 @@ public class ProductRepository implements IProductRepository {
         if (product.getExpirationDate()!=null && product.getExpirationDate().after(new Date())) {
             p.setExpirationDate(product.getExpirationDate());
         }
+        LOGGER.log(Level.INFO, String.format("{\"user_id\":%d}", userId));
         return p;
     }
 }

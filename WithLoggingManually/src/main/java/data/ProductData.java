@@ -18,8 +18,8 @@ public class ProductData {
         long tmpUserId;
         for (int i = 1; i<=10; i++) {
             price = Math.abs(rand.nextFloat())*3;
-            tmpUserId = (Math.abs(rand.nextLong())%((long) 2))+((long) 1);
-            if (!repository.addProduct(new Product("product"+i, price, new Date(), tmpUserId), tmpUserId)) // the last value is in [0;1] because we only define 2 users in user_data.dart
+            tmpUserId = (Math.abs(rand.nextLong())%((long) 10))+((long) 1);
+            if (!repository.addProduct(new Product("product"+i, price, new Date(), tmpUserId), tmpUserId)) // the last value is in [1;10] because we only define 10 users in user_data.dart
                 System.err.println("error : product not added");
         }
     }
