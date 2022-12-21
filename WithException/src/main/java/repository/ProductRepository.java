@@ -36,7 +36,8 @@ public class ProductRepository implements IProductRepository {
                 .filter(product -> product.getId() == productId && product.getUserId() == userId)
                 .findFirst();
         if (productWrapper.isEmpty()) {
-            throw new ProductCollectionException("there is no product identified by : "+productId);
+            final String msg = "there is no product identified by : "+productId;
+            throw new ProductCollectionException(msg);
         }
         return productWrapper.get();
     }
@@ -48,11 +49,10 @@ public class ProductRepository implements IProductRepository {
                 .filter(p -> p.getId() == product.getId())
                 .findFirst();
         if (productWrapper.isPresent()) {
-            throw new ProductCollectionException("the indicated id is already bind to a product: "+product.getId());
+            final String msg = "the indicated id is already bind to a product: "+product.getId();
+            throw new ProductCollectionException(msg);
         }
-        if (product.getUserId() == userId)
-            return this.products.add(product);
-        return false;
+        return this.products.add(product);
     }
 
     @Override
@@ -62,7 +62,8 @@ public class ProductRepository implements IProductRepository {
                 .filter(product -> product.getId() == productId && product.getUserId() == userId)
                 .findFirst();
         if (productWrapper.isEmpty()) {
-            throw new ProductCollectionException("there is no product identified by : "+productId);
+            final String msg = "there is no product identified by: "+productId;
+            throw new ProductCollectionException(msg);
         }
 
         Product product = productWrapper.get();
@@ -76,7 +77,8 @@ public class ProductRepository implements IProductRepository {
                 .filter(p -> p.getId() == product.getId() && p.getUserId() == userId)
                 .findFirst();
         if (productWrapper.isEmpty()) {
-            throw new ProductCollectionException("there is no product identified by : "+product.getId());
+            final String msg = "there is no product identified by : "+product.getId();
+            throw new ProductCollectionException(msg);
         }
 
         Product p = productWrapper.get();

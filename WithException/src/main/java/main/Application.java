@@ -130,6 +130,7 @@ public class Application {
     }
 
     void chooseOptionProduct() {
+        long id;
         System.err.print("choice : ");
         String choice = this.sc.nextLine().trim();
         switch(choice) {
@@ -140,10 +141,20 @@ public class Application {
                     System.err.println(e.getMessage());
                 }
                 break;
-            case "r":
+            case "rps":
                 productRepository.getProducts(userConnected.getId()).forEach(product ->  {
                     System.out.println(product);
                 });
+                break;
+            case "rp":
+                System.err.print("product id : ");
+                id = Long.parseLong(this.sc.nextLine().trim());
+                try {
+                    Product product = productRepository.getProductById(id, userConnected.getId());
+                    System.out.println(product);
+                } catch (ProductCollectionException e) {
+                    System.err.println(e.getMessage());
+                }
                 break;
             case "u":
                 try {
@@ -153,8 +164,8 @@ public class Application {
                 }
                 break;
             case "d":
-                System.err.print("id : ");
-                long id = Long.parseLong(this.sc.nextLine().trim());
+                System.err.print("product id : ");
+                id = Long.parseLong(this.sc.nextLine().trim());
                 try {
                     productRepository.deleteProduct(id, userConnected.getId());
                 } catch (ProductCollectionException e) {

@@ -64,12 +64,12 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", price=" + price +
-                ", expirationDate=" + expirationDate +
-                ", userId=" + userId +
-                '}';
+        return "{" +
+                "id:" + id +
+                ",name:" + name +
+                ",price:" + price +
+                ",expirationDate:" + expirationDate +
+                ",userId:"+userId +
+                "}";
     }
 }
