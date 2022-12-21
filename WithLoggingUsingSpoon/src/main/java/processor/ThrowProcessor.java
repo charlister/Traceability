@@ -4,19 +4,14 @@ import spoon.processing.AbstractProcessor;
 import spoon.reflect.code.CtCodeSnippetStatement;
 import spoon.reflect.code.CtThrow;
 import spoon.reflect.declaration.*;
-import spoon.reflect.factory.CodeFactory;
-import spoon.reflect.factory.Factory;
-import spoon.reflect.factory.FieldFactory;
-import spoon.reflect.path.CtRole;
 import spoon.reflect.reference.CtTypeReference;
 
 import java.util.Set;
-import java.util.logging.Logger;
 
 public class ThrowProcessor extends AbstractProcessor<CtThrow> {
     @Override
     public boolean isToBeProcessed(CtThrow candidate) {
-        return true;
+        return getClass(candidate).getSimpleName().equals("ProductRepository");
     }
 
     @Override
@@ -61,24 +56,8 @@ public class ThrowProcessor extends AbstractProcessor<CtThrow> {
         }
 
         // instruction throw
-        String throwStatementStr = "";
-        throwStatementStr = String.valueOf(ctThrow.getThrownExpression());
-        CtCodeSnippetStatement logMsgStatement = this.getFactory().Code().createCodeSnippetStatement(String.format("LOGGER.log(Level.INFO, %s)", extractMessageFromThrowStatement(throwStatementStr)));
+        CtCodeSnippetStatement logMsgStatement = this.getFactory().Code().createCodeSnippetStatement("LOGGER.log(Level.WARNING, String.format(\"{\\\"user_id\\\":%d,\\\"msg\\\":%s}\", userId, msg))");
         ctThrow.insertBefore(logMsgStatement);
-        ctThrow.comment();
-
-        // gérer la valeur retournée par la méthode
-    }
-
-    private String extractMessageFromThrowStatement(String throwStatementStr) {
-        String result = "";
-
-        int msgBeginIndex = throwStatementStr.indexOf("(")+1;
-        int msgEndIndex = throwStatementStr.lastIndexOf(")");
-
-        result = throwStatementStr.substring(msgBeginIndex, msgEndIndex);
-
-        return result;
     }
 
     private CtClass getClass(CtThrow ctThrow) {
@@ -89,25 +68,5 @@ public class ThrowProcessor extends AbstractProcessor<CtThrow> {
             ctElement = ctElement.getParent();
         }
         return (CtClass) ctElement;
-    }
-
-    private CtConstructor getConstructor(CtThrow ctThrow) {
-        CtElement ctElement = ctThrow;
-        while(!(ctElement instanceof CtConstructor)) {
-            if (ctElement == null)
-                return null;
-            ctElement = ctElement.getParent();
-        }
-        return (CtConstructor) ctElement;
-    }
-
-    private CtMethod getMethod(CtThrow ctThrow) {
-        CtElement ctElement = ctThrow;
-        while(!(ctElement instanceof CtMethod)) {
-            if (ctElement == null)
-                return null;
-            ctElement = ctElement.getParent();
-        }
-        return (CtMethod) ctElement;
     }
 }
