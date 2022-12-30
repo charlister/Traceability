@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2022-12-27T11:45:56.547565500Z</date>
+  <millis>1672141556547</millis>
+  <nanos>565500</nanos>
+  <sequence>0</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":3}</message>
+</record>
+<record>
+  <date>2022-12-27T11:45:56.597567100Z</date>
+  <millis>1672141556597</millis>
+  <nanos>567100</nanos>
+  <sequence>1</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":6}</message>
+</record>
+<record>
+  <date>2022-12-27T11:45:56.598560800Z</date>
+  <millis>1672141556598</millis>
+  <nanos>560800</nanos>
+  <sequence>2</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":6}</message>
+</record>
+<record>
+  <date>2022-12-27T11:45:56.599562Z</date>
+  <millis>1672141556599</millis>
+  <nanos>562000</nanos>
+  <sequence>3</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":1}</message>
+</record>
+<record>
+  <date>2022-12-27T11:45:56.600562900Z</date>
+  <millis>1672141556600</millis>
+  <nanos>562900</nanos>
+  <sequence>4</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":2}</message>
+</record>
+<record>
+  <date>2022-12-27T11:45:56.601565800Z</date>
+  <millis>1672141556601</millis>
+  <nanos>565800</nanos>
+  <sequence>5</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":6}</message>
+</record>
+<record>
+  <date>2022-12-27T11:45:56.602563900Z</date>
+  <millis>1672141556602</millis>
+  <nanos>563900</nanos>
+  <sequence>6</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":4}</message>
+</record>
+<record>
+  <date>2022-12-27T11:45:56.603568500Z</date>
+  <millis>1672141556603</millis>
+  <nanos>568500</nanos>
+  <sequence>7</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":4}</message>
+</record>
+<record>
+  <date>2022-12-27T11:45:56.604563Z</date>
+  <millis>1672141556604</millis>
+  <nanos>563000</nanos>
+  <sequence>8</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":2}</message>
+</record>
+<record>
+  <date>2022-12-27T11:45:56.604563Z</date>
+  <millis>1672141556604</millis>
+  <nanos>563000</nanos>
+  <sequence>9</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":4}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.682179200Z</date>
+  <millis>1672141560682</millis>
+  <nanos>179200</nanos>
+  <sequence>10</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>getProducts</method>
+  <thread>1</thread>
+  <message>{"user_id":1}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.686162700Z</date>
+  <millis>1672141560686</millis>
+  <nanos>162700</nanos>
+  <sequence>11</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":1}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.691162500Z</date>
+  <millis>1672141560691</millis>
+  <nanos>162500</nanos>
+  <sequence>12</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>getProductById</method>
+  <thread>1</thread>
+  <message>{"user_id":1,"product_id":1000,"product_price":1.0}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.692163600Z</date>
+  <millis>1672141560692</millis>
+  <nanos>163600</nanos>
+  <sequence>13</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":1}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.692163600Z</date>
+  <millis>1672141560692</millis>
+  <nanos>163600</nanos>
+  <sequence>14</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":1}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.693163700Z</date>
+  <millis>1672141560693</millis>
+  <nanos>163700</nanos>
+  <sequence>15</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>deleteProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":1}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.694181400Z</date>
+  <millis>1672141560694</millis>
+  <nanos>181400</nanos>
+  <sequence>16</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":1}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.695162400Z</date>
+  <millis>1672141560695</millis>
+  <nanos>162400</nanos>
+  <sequence>17</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>deleteProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":1}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.695162400Z</date>
+  <millis>1672141560695</millis>
+  <nanos>162400</nanos>
+  <sequence>18</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":1}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.696161600Z</date>
+  <millis>1672141560696</millis>
+  <nanos>161600</nanos>
+  <sequence>19</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>getProductById</method>
+  <thread>1</thread>
+  <message>{"user_id":1,"product_id":1004,"product_price":1.0}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.698182200Z</date>
+  <millis>1672141560698</millis>
+  <nanos>182200</nanos>
+  <sequence>20</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>updateProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":1}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.699170200Z</date>
+  <millis>1672141560699</millis>
+  <nanos>170200</nanos>
+  <sequence>21</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>getProducts</method>
+  <thread>1</thread>
+  <message>{"user_id":2}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.700166200Z</date>
+  <millis>1672141560700</millis>
+  <nanos>166200</nanos>
+  <sequence>22</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":2}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.700166200Z</date>
+  <millis>1672141560700</millis>
+  <nanos>166200</nanos>
+  <sequence>23</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":2}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.700166200Z</date>
+  <millis>1672141560700</millis>
+  <nanos>166200</nanos>
+  <sequence>24</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":2}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.701168600Z</date>
+  <millis>1672141560701</millis>
+  <nanos>168600</nanos>
+  <sequence>25</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":2}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.701168600Z</date>
+  <millis>1672141560701</millis>
+  <nanos>168600</nanos>
+  <sequence>26</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":2}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.702167400Z</date>
+  <millis>1672141560702</millis>
+  <nanos>167400</nanos>
+  <sequence>27</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":2}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.703166500Z</date>
+  <millis>1672141560703</millis>
+  <nanos>166500</nanos>
+  <sequence>28</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":2}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.703166500Z</date>
+  <millis>1672141560703</millis>
+  <nanos>166500</nanos>
+  <sequence>29</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":2}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.704167500Z</date>
+  <millis>1672141560704</millis>
+  <nanos>167500</nanos>
+  <sequence>30</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":2}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.704167500Z</date>
+  <millis>1672141560704</millis>
+  <nanos>167500</nanos>
+  <sequence>31</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":2}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.705162800Z</date>
+  <millis>1672141560705</millis>
+  <nanos>162800</nanos>
+  <sequence>32</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>getProducts</method>
+  <thread>1</thread>
+  <message>{"user_id":3}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.705162800Z</date>
+  <millis>1672141560705</millis>
+  <nanos>162800</nanos>
+  <sequence>33</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":3}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.706162800Z</date>
+  <millis>1672141560706</millis>
+  <nanos>162800</nanos>
+  <sequence>34</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>deleteProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":3}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.706162800Z</date>
+  <millis>1672141560706</millis>
+  <nanos>162800</nanos>
+  <sequence>35</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":3}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.706162800Z</date>
+  <millis>1672141560706</millis>
+  <nanos>162800</nanos>
+  <sequence>36</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>deleteProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":3}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.707162200Z</date>
+  <millis>1672141560707</millis>
+  <nanos>162200</nanos>
+  <sequence>37</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":3}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.708180700Z</date>
+  <millis>1672141560708</millis>
+  <nanos>180700</nanos>
+  <sequence>38</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>deleteProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":3}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.708180700Z</date>
+  <millis>1672141560708</millis>
+  <nanos>180700</nanos>
+  <sequence>39</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":3}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.709161900Z</date>
+  <millis>1672141560709</millis>
+  <nanos>161900</nanos>
+  <sequence>40</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>deleteProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":3}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.709161900Z</date>
+  <millis>1672141560709</millis>
+  <nanos>161900</nanos>
+  <sequence>41</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":3}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.710162300Z</date>
+  <millis>1672141560710</millis>
+  <nanos>162300</nanos>
+  <sequence>42</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>deleteProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":3}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.710162300Z</date>
+  <millis>1672141560710</millis>
+  <nanos>162300</nanos>
+  <sequence>43</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>addProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":3}</message>
+</record>
+<record>
+  <date>2022-12-27T11:46:00.711160300Z</date>
+  <millis>1672141560711</millis>
+  <nanos>160300</nanos>
+  <sequence>44</sequence>
+  <logger>repository.ProductRepository</logger>
+  <level>INFO</level>
+  <class>repository.ProductRepository</class>
+  <method>deleteProduct</method>
+  <thread>1</thread>
+  <message>{"user_id":3}</message>
+</record>
+</log>

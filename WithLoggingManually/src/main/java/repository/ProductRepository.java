@@ -22,13 +22,13 @@ public class ProductRepository implements IProductRepository {
         this.products = new ArrayList<>();
         // ajouter le fileHandler dans un block try/catch du constructeur
         try {
-            // créer le fileHander
+            // créer le fileHandler
             fileHandler  = new FileHandler("./traceability.log");
 
-            // ajouter le fileHander à LOGGER
+            // ajouter le fileHandler à LOGGER
             LOGGER.addHandler(fileHandler);
 
-            // modifier le niveau de verbosité autorisé dans fileHander et LOGGER
+            // modifier le niveau de verbosité autorisé dans fileHandler et LOGGER
             fileHandler.setLevel(Level.ALL);
             LOGGER.setLevel(Level.ALL);
         } catch (IOException e) {

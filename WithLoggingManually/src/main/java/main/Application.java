@@ -367,12 +367,14 @@ public class Application {
                 break;
             default:
                 System.err.println("Invalid option !");
+                break;
         }
     }
 
     void productMenu() throws InterruptedException {
         productMenuBuffer.append("c : register a product\n");
-        productMenuBuffer.append("r : display all my products\n");
+        productMenuBuffer.append("rps : display all my products\n");
+        productMenuBuffer.append("rp : display a product\n");
         productMenuBuffer.append("u : change a product\n");
         productMenuBuffer.append("d : remove a product\n");
         productMenuBuffer.append("o : sign out\n");
